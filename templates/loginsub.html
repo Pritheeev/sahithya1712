@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>printing</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    
+    {% block body %}
+    {% for row in login %}
+   
+    <tr>
+       {% if row.username==n and row.password == p %}
+        
+            <a href ="/sprofile/{{row.username}}">Click Here to go to Your Profile</a>
+          
+            {%endif%}
+            {% endfor %}
+           <br>
+           <br>
+            <a href ="/sregister">Click here to register</a>
+    </tr>
+
+    
+    
+    {% endblock %}
+    </body>
+    </html>

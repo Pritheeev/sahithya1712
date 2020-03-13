@@ -1,0 +1,241 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="/static/studentprofile/css/reglayout.css">
+      <link href='https://fonts.googleapis.com/css?family=Content' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Content';font-size: 22px;
+    }
+    </style>
+    </head>
+    <body>
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+             <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+   
+             <ul id="nav" class="nav">
+                <li class ="current"><a class="nav-link" href="/">Home</a></li>
+                <a class="nav-link" href="/sregister">Register</a>
+                <a class="nav-link" href="/slogin">Login</a>
+               </ul>
+               </nav>
+               
+    <form method ='POST' action =" ">
+        <header>
+
+            <br/><br/>
+         
+            <h3 align ='center'  style ="color:orangered">REGISTRATION</h3>
+        </header>
+
+        <table  cellpadding = "10">
+ 
+           <tr>
+            <td>Username :  </td>
+            <td>
+           <input type = "text" name="username"/> </td> </tr>
+             
+            
+            <tr>
+            <td>Password :</td>
+            <td><input type = "password" name="password"/>
+            (max 10 characters)
+            </td>
+          
+            </tr>
+         
+            <tr>
+                <td> Re-enter Password :</td>
+                <td>  <input type = "password" name="cpassword"/>
+                </td>    
+            </tr>
+            <tr>
+                <td>Full Name :</td>
+                <td><input type = "text" name="profname"/>
+                (max 30 characters)
+                </td>
+              
+
+                <!----- about-------------------------------------------------------->
+            
+                <tr>
+                    <td>ABOUT </td>
+                    <td><input type = "text" name="about" maxlength="90"/>
+                        </td>
+                    </tr>
+
+
+                  <!----- Qualification -------------------------------------------------------->
+                
+                    <tr>
+                        <td>QUALIFICATION:</td>
+                        <td><input type = "text" name="qualification"/>
+                        (UG/PG)
+                        </td>
+                      
+                        </tr>
+   
+            <!----- Date Of Birth -------------------------------------------------------->
+            <tr>
+                <td>DATE OF BIRTH</td>
+                 
+                <td>
+                    <input type="text" name="dob" maxlength="100" />
+                </td>
+                </tr>
+                 
+ <!----- Mobile Number ---------------------------------------------------------->
+ <tr>
+    <td>MOBILE NUMBER</td>
+    <td>
+    <input type="tel" name="phone" maxlength="10" />
+    (10 digit number)
+    </td>
+    </tr>
+
+
+ <!----- Email Id ---------------------------------------------------------->
+ <tr>
+    <td>EMAIL ID</td>
+    <td><input type="email" name="email" maxlength="100" /></td>
+    </tr>
+
+<!----- education ---------------------------------------------------------->
+ 
+            <tr>
+                <td>EDUCATION </td>
+                 <br/>
+                <td>
+                <table>
+                 
+                <tr>
+                <td align="center"><b>Sl.No.</b></td>
+                <td align="center"><b>Education</b></td>
+                <td align="center"><b>FoundationName</b></td>
+                <td align="center"><b>Year of Passing</b></td>
+           
+                </tr>
+                 
+                <tr>
+                <td>1</td>
+                <td>University</td>
+                <td><input type="text" name="uniname" maxlength="30" /></td>
+                <td><input type="text" name="gdate" maxlength="30" /></td>
+                 </tr>
+                 
+                <tr>
+                <td>2</td>
+                <td>School</td>
+                <td><input type="text" name="schname" maxlength="30" /></td>
+                <td><input type="text" name="gsdate" maxlength="30" /></td>
+                 </tr>
+                 
+             
+                </table>
+                 
+                </td>
+                </tr>
+
+         <!----- course---------------------------------------------------------->
+ 
+         <tr>
+            <td>COURSE</td>
+             
+            <td>
+                <input type="text" name="course" maxlength="100" />
+            </td>
+            </tr>
+             
+             <br/><br/>
+
+             <tr>
+                <td>WORK EXPERIENCE </td>
+                 <br/>
+                <td>
+                <table>
+                 
+                <tr>
+                <td align="center"><b>Sl.No.</b></td>
+                <td align="center"><b>Place</b></td>
+                <td align="center"><b>Designation</b></td>
+                <td align="center"><b>Duration</b></td>
+                <td align="center"><b>Description</b></td>
+                </tr>
+                 
+                <tr>
+                <td>1</td>
+                <td><input type="text" name="place1" maxlength="30" /></td>
+                <td><input type="text" name="design" maxlength="30" /></td>
+                <td><input type="text" name="duration" maxlength="30" /></td>
+                <td><input type="text" name="descr" maxlength="100" /></td>
+                </tr>
+                 
+                <tr>
+                <td>2</td>
+                <td><input type="text" name="place2" maxlength="30" /></td>
+                <td><input type="text" name="design1" maxlength="30" /></td>
+                <td><input type="text" name="duration1" maxlength="30" /></td>
+                <td><input type="text" name="descri" maxlength="100" /></td>
+                </tr>
+                 
+                </table>
+                 
+                </td>
+                </tr>
+
+            <!----- Skills ------------------------------------------------->
+           
+           <tr>
+            <td>SKILL1 :  </td>
+            <td>
+           <input type = "text" name="skill1"/> </td> </tr>
+             
+           <tr>
+            <td>SKILL2 :  </td>
+            <td>
+           <input type = "text" name="skill2"/> </td> </tr>
+           <tr>
+            <td>SKILL3 :  </td>
+            <td>
+           <input type = "text" name="skill3"/> </td> </tr>
+           <tr>
+            <td>SKILL4 :  </td>
+            <td>
+           <input type = "text" name="skill4"/> </td> </tr>
+           <td>SKILL5:  </td>
+           <td>
+          <input type = "text" name="skill5"/> </td> </tr>
+          
+          <!----- areas of intrest ------------------------------------------------->
+          <tr>
+            <td>AREA OF INTEREST 1:  </td>
+            <td>
+           <input type = "text" name="aeo1"/> </td> </tr>
+           <tr>
+            <td>AREA OF INTEREST 2:  </td>
+            <td>
+           <input type = "text" name="aeo2"/> </td> </tr>
+           <tr>
+            <td>AREA OF INTEREST 3:  </td>
+            <td>
+           <input type = "text" name="aeo3"/> </td> </tr>
+
+               
+            <!----- Submit and Reset ------------------------------------------------->
+            <tr>
+            <td colspan="4" align="center">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                
+            <input id='x' type="submit" value="Submit">
+            <input id='x' type="reset" value="Reset">
+            </td>
+            </tr>
+            </table>
+      </form>
+    </body>
+    
+    </html>

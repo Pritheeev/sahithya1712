@@ -1,0 +1,50 @@
+
+body{
+  position: center;
+ height: 800px;
+ min-height: 500px;
+ width: 100%;
+ background: url(/static/header-background.jpg) repeat top center;
+ background-size: cover !important;
+  -webkit-background-size: cover !important;
+  margin: 80px;
+
+ overflow-x:hidden;
+ overflow-y: auto; 
+ color: antiquewhite;
+}
+
+input[type=text], select, textarea {
+  width: 40%;
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 10px; /* Rounded borders */
+  box-sizing: content-box; /* Make sure that padding and width stays in place */
+  margin-top: 16px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+
+
+label{
+  width: 240px;
+  display: inline-block;
+  font-family: cursive;
+}

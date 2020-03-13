@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Student Profile</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS 
+   ================================================== -->
+   <link rel="stylesheet" href="/static/studentprofile/css/default.css">
+	<link rel="stylesheet" href="/static/studentprofile/css/layout.css">
+   <link rel="stylesheet" href="/static/studentprofile/css/media-queries.css">
+   <link rel="stylesheet" href="/static/studentprofile/css/magnific-popup.css">
+   <link rel="stylesheet" href="/static/studentprofile/css/s1.css">
+
+
+   <!-- Script/static/profile1//static/profile1/
+   ================================================== -->
+	<script src="/static/studentprofile/js/modernizr.js"></script>
+	<script src="/static/studentprofile/js/s1.js"></script>
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="/static/studentprofile/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a href ="/inbox/{{data1.username}}">Inbox</a></li>
+            <li><a href ="/message/{{data1.username}}">Message</a></li>
+            <li><a href ="/slogin">Logout</a></li>
+
+            <li class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Click to Search</button>
+               <div id="myDropdown" class="dropdown-content">
+                 <input type="text" placeholder="Search for faculty.." id="myInput" onkeyup="filterFunction()">
+                 <a href="/searchf">Search with faculty name</a>
+                 <a href="#s2">s2</a>
+                 <a href="#s3">s3</a>
+                 
+               </div>
+            </li>
+             
+
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Welcome {{data1.profname}}</h1>
+            <h3> <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+            effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
+            and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="/static/studentprofile/images/profilepic.jpg" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>{{data1.about}}
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>{{data1.profname}}</span><br>
+                     <span>{{data1.dob}}</span>
+                     <span>{{data1.designation}}</span><br>
+						   <span>{{data1.phone}}</span><br>
+                     <span>{{data1.email}}</span>
+					   </p>
+
+               </div>
+
+               
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{data2.uniname}}</h3>
+                  <p class="info">{{data2.course}}<span>&bull;</span> <em class="date">{{data2.gdate}}</em></p>
+
+                  <p>{{data2.desc}}
+                                    </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{data2.schname}}</h3>
+                  <p class="info">Higher Secondary<span>&bull;</span> <em class="date">{{data2.gsdate}}</em></p>
+
+                  <p>
+                     {{data2.des}}
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <section id="portfolio">
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{data3.place1}}</h3>
+                  <p class="info">{{data3.design}}<span>&bull;</span> <em class="date">{{data3.duration}}</em></p>
+
+                  <p>
+                  {{data3.descr}}
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{data3.place2}}</h3>
+                  <p class="info">{{data3.design1}}<span>&bull;</span> <em class="date">{{data3.duration1}}</em></p>
+
+                  <p>
+                    {{data3.descri}}
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+   </section>
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <a href ='/updateskill/{{data1.username}}'><input align ='center' id='x' type="submit" value="Submit"></a>
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+        
+
+				<div class="bars">
+
+				   <ul class="skills">
+                  <br>
+                  <li><span class="bar-expand photoshop"></span><em>{{data4.skill1}}</em></li>
+                  <li><span class="bar-expand illustrator"></span><em>{{data4.skill2}}</em></li>
+						<li><span class="bar-expand wordpress"></span><em>{{data4.skill3}}</em></li>
+						<li><span class="bar-expand css"></span><em>{{data4.skill4}}</em></li>
+						<li><span class="bar-expand html5"></span><em>{{data4.skill5}}</em></li>
+                  
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+
+      </div> <!-- End skills -->
+
+
+ <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Areas of interest</span></h1>
+            <br>
+         </div>
+
+       
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand photoshop"></span><em>{{data5.aeo1}}</em></li>
+                  <li><span class="bar-expand illustrator"></span><em>{{data5.aeo2}}</em></li>
+						<li><span class="bar-expand wordpress"></span><em>{{data5.aeo3}}</em></li>
+						
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+	
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+           
+            
+           
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+</div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+  
+
+  
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               
+
+              
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   {{data1.profname}}<br>
+						  
+                     <span>{{data1.phone}}</span>
+                     <span>{{data1.email}}</span>
+					   </p>
+
+				   </div>
+
+               <div class="widget widget_tweets">
+
+                  
+
+                  <ul id="twitter">
+                     
+                  </ul>
+
+		         </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright JASP </li>
+               <li>Design by <a href="http://www.google.com/" title="JASP" target="_blank">JASP's Designers</a></li>   
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="/static/studentprofile/js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="/static/studentprofile/js/jquery.flexslider.js"></script>
+   <script src="/static/studentprofile/js/waypoints.js"></script>
+   <script src="/static/studentprofile/js/jquery.fittext.js"></script>
+   <script src="/static/studentprofile/js/magnific-popup.js"></script>
+   <script src="/static/studentprofile/js/init.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+
+       
+       
+        
+        
+            
+        
+    </html>
+    <!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Text Input Control</title>
+   </head>
+  
+   <body>
+    {% block body %}
+    {% for row in data1 %}
+      <form >
+         {{row.from1}}
+         <br>
+         <br>
+         Message
+         <br>
+         <br>
+         <textarea rows = "5" cols = "50" name = "description">
+            {{row.message}} 
+         </textarea>
+         
+         <br>
+         <br>
+         <a href ='/reply/{{row.from1}}'><button type ='button'>Reply</button></a>
+         <br>
+         <br>
+         {% endfor %}
+         {%endblock%}
+      </form>
+   </body>
+  
+</html>
